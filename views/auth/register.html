@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css">
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90vw;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap :7rem;
+            padding: 0 2rem;
+        }
+
+        .login-content{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        form{
+	        width: 360px;
+        }
+
+        .login-content h1{
+            color: #333;
+            font-size: 2rem;
+        } 
+
+        .login-content .container-input{
+            position: relative;
+            display: grid;
+            grid-template-columns: 7% 93%;
+            margin: 25px 0;
+            padding: 5px 0;
+            border-bottom: 2px solid #d9d9d9;
+        }
+
+        .login-content .container-input.username{
+            margin-top: 50px;
+        }
+
+
+        .logo-input{
+            color: #d9d9d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-input i{
+            transition: .3s;
+        }
+
+        .container-input > div{
+            position: relative;
+	        height: 45px;
+        }
+
+        .container-input:before, .container-input:after{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 0%;
+            height: 2px;
+            background-color: #38d39f;
+            transition: .4s;
+        }
+
+        .container-input:before{
+            right: 50%;
+        }
+
+        .container-input:after{
+            left: 50%;
+        }
+
+        .container-input.focus:before, .container-input.focus:after{
+            width: 50%;
+        }
+
+        .container-input.focus > .i > i{
+            color: #38d39f;
+        }
+
+        .container-input > div > input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background: none;
+            padding: 0.5rem 0.7rem;
+            font-size: 1.2rem;
+            color: #555;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .container-input.password{
+            margin-bottom: 4px;
+        }
+
+        .button{
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background: linear-gradient(#37B1B3, #16A4A9);
+            background-size: 200%;
+            font-size: 1.2rem;
+            color: #fff;
+            letter-spacing: 2px;
+            margin: 2rem 0;
+            cursor: pointer;
+            transition: .5s;
+            box-shadow: 0 8px 32px 0 rgba(58, 159, 185, 0.37);
+        }
+        
+        .button:hover{
+            background-position: right;
+        }
+
+        .text-content{
+            text-align: left;
+        }
+
+        .text-content h1{
+            padding:10px 0;
+        }
+
+        .text-content p{
+            font-size: 17px;
+            color: #555;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="container">
+        <div class="gambar">
+            <h1>Tempat Gambar</h1>
+        </div>
+            <div class="login-content">
+            <form class="login" method="post" action="/register/process">
+                <div class="text-content">
+                    <h1>Register to your account</h1>
+                </div>
+                <div class="container-input username">
+                    <div class="logo-input">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="input-username">
+                        <input class="login__input" type="text" placeholder="Fullname" name="fullname" required />
+                    </div>
+                </div>
+                <div class="container-input email">
+                    <div class="logo-input">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="input-username">
+                        <input class="login__input" type="text" placeholder="Email" name="email" required />
+                    </div>
+                </div>
+                <div class="container-input password">
+                    <div class="logo-input">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="input-password">
+                        <input class="login__input" type="password" placeholder="Password" name="password" required />
+                    </div>
+                </div>
+                <button class="button" type="submit">Register</button>
+            
+            <div class="button1" style="font-size: 18px;  ">
+                <a href="./login" style="color: #6ABDF5; ">Login</a>
+            </div> 
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{template "general/header"}}
+
+
+<style>
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 18px 28px;
+    transition: all .50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    color: black;
+    font-size: 24px;
+    margin-right: 3px;
+    font-weight: 600;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+.main a{
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-right: 10px;
+    color: black;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.button{
+        border-radius: 200px;
+        padding: 4px 12px;
+        border : 2px solid black;
+}
+
+
+    main{
+        overflow: hidden;
+    }
+
+    .container {
+            width: 90vw;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap :2rem;
+            padding: 0 2rem;
+            margin-top: 35px;
+        }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Welcome to kanban app</h1>
+        </div>
+        <div class="main">
+            <a
+                href="/login"
+            >Login</a>
+
+            <a
+                href="/register" class="button"
+            >Register</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+
+            </div>
+            <div class="image">
+                <img style="width: 600px; height: auto; margin-top: 150px;" src="https://ik.imagekit.io/j2sarmu8g/5272.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671422889613" alt="">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
